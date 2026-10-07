@@ -19,6 +19,7 @@
         --accent: #8b5cf6;
         --dark: #0f172a;
         --light: #f8fafc;
+        --success: #22c55e;
         --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -1113,6 +1114,58 @@
         }
       }
 
+
+
+      /* Enhanced mobile responsiveness */
+      @media (max-width: 768px) {
+        nav { padding: 12px 16px; }
+        .logo { font-size: 24px; }
+        .hero { min-height: auto; padding: 95px 18px 55px; }
+        .hero-container { gap: 30px; }
+        .hero-content { order: 2; }
+        .hero-image { order: 1; }
+        .image-wrapper { width: min(260px, 75vw); height: min(260px, 75vw); }
+        .typing-text { font-size: clamp(32px, 10vw, 42px); }
+        .hero-description, .projects-intro, .about-text { font-size: 16px; }
+        .hero-description { margin-left: auto; margin-right: auto; }
+        .hero-buttons { flex-direction: column; align-items: stretch; gap: 12px; }
+        .hero-buttons .btn { width: 100%; justify-content: center; }
+        section { padding: 60px 16px; }
+        .section-title { font-size: clamp(30px, 9vw, 38px); margin-bottom: 45px; }
+        .about-content { gap: 30px; }
+        .about-stats { grid-template-columns: 1fr 1fr; gap: 12px; }
+        .stat-card { padding: 20px 12px; }
+        .stat-number { font-size: 30px; }
+        .projects-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+        .project-card { width: 100%; }
+        .project-header, .project-body { padding: 22px 18px; }
+        .project-header { min-height: 170px; }
+        .project-icon { font-size: 52px; }
+        .project-title { font-size: 24px; }
+        .project-actions { flex-direction: column; }
+        .btn-project { width: 100%; }
+        .skills-grid { grid-template-columns: 1fr; }
+        .skill-card { padding: 28px 20px; }
+        .certs-grid { display: grid; grid-template-columns: 1fr; width: 100%; }
+        .cert-card { min-width: 0; width: 100%; padding: 28px 20px; }
+        .timeline::before { left: 18px; }
+        .timeline-item { padding-left: 52px; padding-right: 0; }
+        .timeline-dot { left: 8px !important; }
+        .timeline-content { padding: 20px; }
+        .social-links { flex-wrap: wrap; }
+        footer { padding: 24px 16px; font-size: 13px; }
+      }
+
+      @media (max-width: 420px) {
+        .hero { padding-left: 14px; padding-right: 14px; }
+        section { padding-left: 14px; padding-right: 14px; }
+        .about-stats { grid-template-columns: 1fr; }
+        .floating-icon { width: 42px; height: 42px; font-size: 20px; }
+        .project-tech { gap: 7px; }
+        .tech-tag { padding: 5px 11px; font-size: 12px; }
+        .contact-text { font-size: 17px; }
+      }
+
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 10px;
@@ -1235,12 +1288,12 @@
             <div class="stat-label">Years Experience</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">3+</div>
+            <div class="stat-number">5+</div>
             <div class="stat-label">Projects Completed</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">1</div>
-            <div class="stat-label">Major Projects</div>
+            <div class="stat-number">4</div>
+            <div class="stat-label">Featured Projects</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">100%</div>
@@ -1256,9 +1309,7 @@
 
       <div class="projects-intro fade-in">
         <p>
-          Here are my two major projects that demonstrate my expertise in modern
-          web development. Both projects are fully functional, feature-rich
-          applications built with pure HTML, CSS, and JavaScript.
+          Here are selected projects that demonstrate my experience in frontend development and AI-powered application development.
         </p>
       </div>
 
@@ -1369,6 +1420,60 @@
               >
                 <i class="fas fa-code"></i> Source
               </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: StudyMate AI -->
+        <div class="project-card">
+          <div class="project-header" style="background: var(--gradient-3)">
+            <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+            <span class="project-status ongoing"><i class="fas fa-check-circle"></i> Completed</span>
+            <h3 class="project-title">StudyMate AI</h3>
+            <p class="project-subtitle">AI-Powered Study Assistant</p>
+          </div>
+          <div class="project-body">
+            <p class="project-description">An AI-powered study assistant that helps students understand difficult topics, summarize text, generate quizzes, and create structured study notes in one place.</p>
+            <ul class="features-list">
+              <li><i class="fas fa-check"></i> AI Topic Explanations</li>
+              <li><i class="fas fa-check"></i> Text Summarization</li>
+              <li><i class="fas fa-check"></i> Quiz Generation</li>
+              <li><i class="fas fa-check"></i> Structured Study Notes</li>
+              <li><i class="fas fa-check"></i> Saved Notes & Responsive UI</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag">React</span><span class="tech-tag">TypeScript</span><span class="tech-tag">TanStack</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">Gemini AI</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://study-buddy-ai-4131.lovable.app" class="btn-project btn-live" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://github.com/Yasirkhan790/studymate-ai" class="btn-project btn-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: ScamShield AI -->
+        <div class="project-card">
+          <div class="project-header" style="background: linear-gradient(135deg, #0f766e 0%, #2563eb 100%)">
+            <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+            <span class="project-status ongoing"><i class="fas fa-check-circle"></i> Completed</span>
+            <h3 class="project-title">ScamShield AI</h3>
+            <p class="project-subtitle">Explainable AI Scam Risk Assessment</p>
+          </div>
+          <div class="project-body">
+            <p class="project-description">An AI-assisted scam detection application that analyzes messages, URLs, and screenshots, assigns a risk level, and explains the warning indicators behind the result.</p>
+            <ul class="features-list">
+              <li><i class="fas fa-check"></i> Message Scam Analysis</li>
+              <li><i class="fas fa-check"></i> URL Risk Assessment</li>
+              <li><i class="fas fa-check"></i> Screenshot Text Analysis</li>
+              <li><i class="fas fa-check"></i> Explainable Risk Indicators</li>
+              <li><i class="fas fa-check"></i> Analysis History</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag">React</span><span class="tech-tag">Vite</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">FastAPI</span><span class="tech-tag">Python</span><span class="tech-tag">SQLite</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://scam-shield-ai-5tzh.vercel.app/" class="btn-project btn-live" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://github.com/Yasirkhan790/scamshield-ai" class="btn-project btn-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
             </div>
           </div>
         </div>
